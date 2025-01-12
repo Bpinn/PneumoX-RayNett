@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="icon" href="abc.png" type="image/png">
+    <style>
+           body, html {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 100%;
+        }
+        .image-half {
+            flex: 1;
+            background-image: url('bgkk.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .form-half {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f8ff;  
+        }
+        .form-container {
+            width: 80%;
+            max-width: 400px;
+            padding: 50px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h2 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 36px;
+            text-align: center;
+            color: #0077be;
+            margin-bottom: 30px;
+        }
+        .input-group {
+            margin-bottom: 25px;
+            width: 100%;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            background-color: #0077be;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #005f9e;
+        }
+        .create-account-text {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .create-account {
+            color: #0077be;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .create-account:hover {
+            text-decoration: underline;
+        }
+        .fgt{
+            padding-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-half"></div>
+        <div class="form-half">
+            <div class="form-container">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="Email">Email Or Username</label>
+                        <input type="email" id="Email" name="Email" required placeholder="Enter your email or username">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="Enter your password">
+                    </div>
+                    <a class="fgt" href="">Forgot Password</a>
+                    <button type="submit">Login</button>
+                </form>
+                <p class="create-account-text">Don't have an account? <a href="registration.html" class="create-account">Create an account</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            const email = document.getElementById('Email').value;
+            const password = document.getElementById('password').value;
+
+            if (email === 'admin@gmail.com' && password === 'admin@123') {
+                // Correct credentials, redirect to index.html
+                window.location.href = 'index.html';
+            } else {
+                // Incorrect credentials, show an error message
+                alert('Incorrect email or password. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>

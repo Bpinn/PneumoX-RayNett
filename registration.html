@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="icon" href="abc.png" type="image/png">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 100%;
+        }
+        .image-half {
+            flex: 1;
+            background-image: url('bgkk.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .form-half {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f8ff;
+        }
+        .form-container {
+            width: 80%;
+            max-width: 400px;
+            padding: 50px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h2 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 36px;
+            text-align: center;
+            color: #0077be;
+            margin-bottom: 30px;
+        }
+        .input-group {
+            margin-bottom: 25px;
+            width: 100%;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            background-color: #0077be;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #005f9e;
+        }
+        .login-text {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .login-link {
+            color: #0077be;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .login-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-half"></div>
+        <div class="form-half">
+            <div class="form-container">
+                <h2>Register</h2>
+                <form>
+                    <div class="input-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="Enter your password">
+                    </div>
+                    <div class="input-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+                    </div>
+                    <div class="input-group">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <input type="checkbox" id="is-doctor" name="is-doctor" style="width: auto;">
+                            <label for="is-doctor" style="margin-bottom: 0;">I am a doctor</label>
+                        </div>
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+                <p class="login-text">Already have an account? <a href="firstpage.html" class="login-link">Login</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
