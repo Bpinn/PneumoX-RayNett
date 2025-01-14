@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>PnuemoX-RayNet</title>
+    <link rel="stylesheet" href="pneumonia div.css">
+</head>
+<body>
+          
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="abc.png" alt="Left Logo" class="logo-left">
+        </div>
+        <div class="navbar-center">
+            <div class="logoo">
+                <div class="pahilo">PneumoX-<span>RayNet</span></div>
+            </div>
+           
+        </div>
+        <nav>
+            <a href="newbg.html" class="nav-item" data-page="home">Home</a>
+            <a href="About.html" class="nav-item" data-page="about">About</a>
+            <a href="services.html" class="nav-item" data-page="services">Services</a>
+            <a href="Contacts.html" class="nav-item" data-page="contacts">Contacts</a>
+         </nav>
+    </div>
+        <div class="upload-section">
+            <h2>Upload X-Ray Scan</h2>
+            <div class="file-input-wrapper">
+                <input type="file" id="file-upload" accept="image/*" style="display: none;">
+                <button class="button" onclick="document.getElementById('file-upload').click()">Choose File</button>
+                <span id="file-name">No file chosen</span>
+            </div>
+            <button id="clear-file" class="button" style="display: none;">Clear File</button>
+            <button class="detect">Check</button>
+        </div>
+</main>
+<button class="chat-button" onclick="window.location.href='chatbot.html'">Chat</button>
+<script src="upload.js"></script>
+
+     <div class="wrapper">
+        <div class="box">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    </body>
+    </html>
